@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Vendor Details</title>
+
+    <!-- Custom fonts for this template -->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this page -->
+    <link
+      href="vendor/datatables/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="index.html"
+        >
+          <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+          </div>
+          <div class="sidebar-brand-text mx-3">Stock Manager</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Heading -->
+        <div class="sidebar-heading">Interface</div>
+
+        <!-- Nav Item - Items -->
+        <li class="nav-item">
+          <a class="nav-link" href="items.html">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Items</span></a
+          >
+        </li>
+
+        <!-- Nav Item - Vendor Details -->
+        <li class="nav-item">
+          <a class="nav-link" href="vendordetails.html">
+            <i class="fas fa-fw fa-address-book"></i>
+            <span>Vendor Details</span></a
+          >
+        </li>
+
+        <!-- Nav Item - Customer -->
+        <li class="nav-item">
+          <a class="nav-link" href="customer.html">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Customer</span></a
+          >
+        </li>
+
+        <!-- Nav Item - Purchase -->
+        <li class="nav-item">
+          <a class="nav-link" href="purchase.html">
+            <i class="fas fa-fw fa-money-check-alt"></i>
+            <span>Purchase</span></a
+          >
+        </li>
+
+        <!-- Nav Item - Lost Damage -->
+        <li class="nav-item">
+          <a class="nav-link" href="loss&damage.html">
+            <i class="fas fa-fw fa-house-damage"></i>
+            <span>Loss & Damage</span></a
+          >
+        </li>
+
+        <!-- Nav Item - Sales -->
+        <li class="nav-item">
+          <a class="nav-link" href="sales.html">
+            <i class="fas fa-fw fa-caret-up"></i>
+            <span>Sales</span></a
+          >
+        </li>
+
+        <!-- Nav Item - Sales Return  -->
+        <li class="nav-item">
+          <a class="nav-link" href="salesreturn.html">
+            <i class="fas fa-fw fa-caret-down"></i>
+            <span>Sales Return</span></a
+          >
+        </li>
+
+        <!-- Nav Item - Purchase Return  -->
+        <li class="nav-item">
+          <a class="nav-link" href="purchasereturn.html">
+            <i class="fas fa-fw fa-level-down-alt"></i>
+            <span>Purchase Return</span></a
+          >
+        </li>
+
+        <!-- Nav Item - Stock Transfer -->
+        <li class="nav-item">
+          <a class="nav-link" href="stocktransfer.html">
+            <i class="fas fa-fw fa-exchange-alt"></i>
+            <span>Stock Transfer</span></a
+          >
+        </li>
+
+        <!-- Nav Item - Rack -->
+        <li class="nav-item">
+          <a class="nav-link" href="rack.html">
+            <i class="fas fa-fw fa-archive"></i>
+            <span>Rack</span></a
+          >
+        </li>
+
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        
+          <button type="button" class="btn btn-danger btn-md">Bill</button>
+        
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <form class="form-inline">
+              <button
+                id="sidebarToggleTop"
+                class="btn btn-link d-md-none rounded-circle mr-3"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+            </form>
+
+            <!-- Topbar Search -->
+            <form
+              class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
+            >
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control bg-light border-0 small"
+                  placeholder="Search for..."
+                  aria-label="Search"
+                  aria-describedby="basic-addon2"
+                />
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search fa-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Topbar Navbar -->
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <!-- Add Items and List Tab -->
+          <!-- Add Items and List Tab -->
+           <!-- Page Heading -->
+           <div
+           class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-left: 10px;"
+         >
+           <h1 class="h3 mb-0 text-gray-800">Purchase </h1>
+           <a
+             href="#"
+             class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+             ><i class="fas fa-download fa-sm text-white-50"></i> Generate
+             Report</a
+           >
+         </div>
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-left: 10px;">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="home-tab"
+                data-toggle="tab"
+                href="#home"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+                >Voucher</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="profile-tab"
+                data-toggle="tab"
+                href="#profile"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+                >List Items</a
+              >
+            </li>
+          </ul>
+
+          <div class="tab-content" id="myTabContent">
+            <!-- ------Add Items----- -->
+            <div
+              class="tab-pane fade show active"
+              id="home"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+            >
+              <div class="row">
+                <div class="col-sm" style="margin-left:10px;">
+                  <select
+                    class="browser-default custom-select"
+                    style="margin-top: 30px"
+                  >
+                    <option selected>Vendor Name</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+
+                  
+
+                  <div class="input-group-lg mb-3">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Batch Number"
+                        style="margin-top: 30px"
+                      />
+                    </div>
+
+                    <!-- Pan Number -->
+                  <div class="input-group-lg mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Value"
+                      style="margin-top: 30px"
+                    />
+                  </div>
+
+                 
+                  
+                  
+
+                 
+                    <!-- Bill Image -->
+                  <div class="input-group-lg mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Bill Image"
+                      style="margin-top: 30px"
+                    />
+                  </div>
+
+                 
+                </div>
+
+                  <!-- Second Column -->
+                  <div class="col-sm" style="margin-left: 10px;">
+                    <select
+                    class="browser-default custom-select"
+                    style="margin-top: 30px"
+                  >
+                    <option selected>Item</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  
+                  <!-- Contact -->
+                  <div class="input-group-lg mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Quantity"
+                      style="margin-top: 30px"
+                    />
+                  </div>
+
+                  <div class="input-group-lg mb-3">
+                    <input
+                      type="date"
+                      class="form-control"
+                      placeholder="Date"
+                      style="margin-top: 30px"
+                    />
+                  </div>
+
+                   <!-- Email -->
+                   <div class="input-group-lg mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Bill Number"
+                      style="margin-top: 30px"
+                    />
+                  </div>
+                  
+
+                  </div>
+                <!-- Third Colom -->
+                <div class="col-sm" style="margin-left: 10px;">
+                  <!-- Company Name -->
+                  <div class="input-group-lg mb-3">
+                    <select
+                    class="browser-default custom-select"
+                    style="margin-top: 30px"
+                  >
+                    <option selected>Vendor Details</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                    
+                  </div>
+
+                
+  
+                  
+
+                  <!-- Company Contact -->
+                  <div class="input-group-lg mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Units"
+                      style="margin-top: 30px"
+                    />
+                  </div>
+
+                  <select
+                    class="browser-default custom-select"
+                    style="margin-top: 30px"
+                  >
+                    <option selected>Rack Number</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+
+                   <!-- Item Brand Name -->
+                   <div class="input-group-lg mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Item Brand Name"
+                      style="margin-top: 30px"
+                    />
+                  </div>
+
+                </div>
+              </div>
+              <div class="container" >
+                <div class="form-group">
+                  <Span style="color: red;" ><label for="textarea1">
+                    Remarks
+                  </label></Span>
+                  <textarea class="form-control" id="textarea1" rows="3" placeholder="Enter Remarks Here..."></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" >Submit</button>
+              </div>
+            </div>
+            <!-- ------Add items Ends----- -->
+
+            <!-- -----------List Items----- -->
+            <div
+              class="tab-pane fade"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <!--  <div class="card shadow mb-4"> -->
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Purchase Details
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table
+                        class="table table-bordered"
+                        id="dataTable"
+                        width="100%"
+                        cellspacing="0"
+                      >
+                        <thead>
+                          <tr class="table-info">
+                            <th>Vendor Name</th>
+                            <th>Item </th> 
+                            <th>Vendor </th>
+                            <th>Batch Number</th>
+                            <th>Quantity</th>
+                            <th>Units</th>
+                            <th>Value</th>
+                            <th>Bill No</th>
+                            <th>Rack No</th>
+                            <th>Bill Image</th>
+                            <th>Date</th>
+                            <th>Item Brand Name</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tfoot>
+                          <tr class="table-info">
+                            <th>Vendor Name</th>
+                            <th>Item </th> 
+                            <th>Vendor </th>
+                            <th>Batch Number</th>
+                            <th>Quantity</th>
+                            <th>Units</th>
+                            <th>Value</th>
+                            <th>Bill No</th>
+                            <th>Rack No</th>
+                            <th>Bill Image</th>
+                            <th>Date</th>
+                            <th>Item Brand Name</th>
+                            <th>Actions</th>
+                          </tr>
+                        </tfoot>
+                        <tbody>
+                          <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td><td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>Garrett Winters</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>63</td>
+                            <td>2011/07/25</td>
+                            <td>$170,750</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td><td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>Ashton Cox</td>
+                            <td>Junior Technical Author</td>
+                            <td>San Francisco</td>
+                            <td>66</td>
+                            <td>2009/01/12</td>
+                            <td>$86,000</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td><td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>Cedric Kelly</td>
+                            <td>Senior Javascript Developer</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                            <td>2012/03/29</td>
+                            <td>$433,060</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td><td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>Airi Satou</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>33</td>
+                            <td>2008/11/28</td>
+                            <td>$162,700</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td><td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>Brielle Williamson</td>
+                            <td>Integration Specialist</td>
+                            <td>New York</td>
+                            <td>61</td>
+                            <td>2012/12/02</td>
+                            <td>$372,000</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td><td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>Herrod Chandler</td>
+                            <td>Sales Assistant</td>
+                            <td>San Francisco</td>
+                            <td>59</td>
+                            <td>2012/08/06</td>
+                            <td>$137,500</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td><td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>Rhona Davidson</td>
+                            <td>Integration Specialist</td>
+                            <td>Tokyo</td>
+                            <td>55</td>
+                            <td>2010/10/14</td>
+                            <td>$327,900</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td><td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>Colleen Hurst</td>
+                            <td>Javascript Developer</td>
+                            <td>San Francisco</td>
+                            <td>39</td>
+                            <td>2009/09/15</td>
+                            <td>$205,500</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td><td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>Sonya Frost</td>
+                            <td>Software Engineer</td>
+                            <td>Edinburgh</td>
+                            <td>23</td>
+                            <td>2008/12/13</td>
+                            <td>$103,600</td>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td><td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                         
+                          
+                           
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div> 
+    
+            <!-- Vendor List Table -->
+             </div> 
+            <!-- /.container-fluid -->
+             </div> 
+            <!-- End of Main Content -->
+            </div>
+          </div>
+        </div>
+
+        
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2020</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+  </body>
+</html>
